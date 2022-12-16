@@ -1,0 +1,28 @@
+<IndexPage>:
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "horizontal"
+        Label:
+            id: label_to_update
+            text: root.label_to_update
+    BoxLayout:
+        orientation: "horizontal"
+        anchor_y: "bottom"
+        size_hint_max_y: 100
+        IndexButton:
+            text: "Home"
+            on_press: root.display_home_page()
+        IndexButton:
+            text: "+"
+            on_press: root.display_transaction_page()
+        IndexButton:
+            text: "Settings"
+            on_press: root.display_settings_page()
+
+<HomePage>:
+    orientation: "vertical"
+    Label:
+        text: "Home"
+
+<IndexButton@Button>:
+    background_color:(108/255, 208/255, 245/255, 1)
